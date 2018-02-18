@@ -1,28 +1,35 @@
-# RhinoBot: The music bot for Discord.
 
-MusicBot is a Discord music bot written in [Python](https://www.python.org "Python homepage"). It plays requested songs and if the queue becomes empty it will play through a list of existing songs.
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/cdfdf0081ea4438e86ea6971a021d6b0)](https://www.codacy.com/app/kyranet/MusicBot?utm_source=github.com&utm_medium=referral&utm_content=kyranet/MusicBot&utm_campaign=badger)
 
-### How do I set it up?
+# MusicBot
 
-[CLICK HERE](https://github.com/SexualRhinoceros/MusicBot/wiki) to find the guide that suites your operating system.
+MusicBot is a music bot (yeah, another bot in this world) built on top of [Klasa](https://github.com/dirigeants/klasa/), and uses [Discord.js](https://github.com/hydrabolt/discord.js) to connect to the Discord API.
 
-### Commands
+## Features
 
-Commands are listed [here](https://github.com/SexualRhinoceros/MusicBot/wiki/Commands "Commands list").
+- All basic music bot commands, included skip prompting (based on the 40% of users connected to the voice channel, after 4 users).
+- An echo command, because, why not?
+- Clean code, easy to modify. Fully modular and classbased.
+- Full Music Handler interface and caching, make sure she replies 'smartly'!
 
-### Configuration
+## Requirements
 
-The main configuration file is `config/options.ini`, but is not included.  Simply make a copy of `example_options.ini` and rename to `options.ini`.  See `example_options.ini` for more information on how to configure it.
+- `git` command line ([Windows](https://git-scm.com/download/win)|[Linux](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)|[MacOS](https://git-scm.com/download/mac)) installed
+- `node` [Version 8.1.0 or higher](https://nodejs.org)
+- `ffmpeg`: `npm install --global ffmpeg-binaries`
+- `node-opus`: `npm install node-opus` (alternatively you can use opusscript, but it's very bad for production, has memoryleaks and stream/quality issues).
+- A **good** network connection.
 
-[CLICK HERE](https://github.com/SexualRhinoceros/MusicBot/wiki/Configuration) for more details.
+## Downloading
 
-### Great, now how do I use it?
-Download the bot, set the dependencies up, then run `runbot.bat`! (or `run.sh` on mac/linux)  Read the tutorial if you don't know what to do.
+In a command prompt in your projects folder (wherever that may be) run the following:
 
-If you have any errors, read the FAQ. If that didn't help, you can ask for assistance on the discord help server. Is is recommended to take screenshots so the developers can see errors.
+```
+git clone https://github.com/kyranet/MusicBot
+```
 
-[Rhino Help Server](http://discord.me/rhinohelp "Discord link")
+Once finished:
 
-### FAQ
-
-Some frequently asked questions are listed on the wiki [here](https://github.com/SexualRhinoceros/MusicBot/wiki/FAQ "Wiki").
+- In the folder from where you ran the git command, run `cd MusicBot` and then run `npm install`
+- Rename `config.json.example` to `config.json`
+- Edit `config.json` and enter your bot token and the YouTube Search API token.
